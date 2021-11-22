@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Modifying Attributes</title>
+
+    <style>
+      .class1 {font-size:large}
+      .class2 {font-size:small}
+    </style>
+
+  </head>
+
+  <body>
+
+    <p class = "class1" style="color:red;">Text in paragraph with class "class1" and inline style for red text.</p>
+    <p class = "class1">Text in paragraph with class "class1" and no in-line style.</p>
+ 
+
+    <script>
+
+        // Iterate through all the paragraph tags
+        for (let p of document.getElementsByTagName("p")) {
+
+          // See what attributes the tag has.
+          console.log("The attributes of this tag are: " + p.getAttributeNames())
+
+          // Get information about the current style
+          // The values of CSS properties are also properties of the style attribute
+          console.log(`Current style attribute is ${p.style}`)  // A style object
+          console.log(`Current color property of style attribute is ${p.style.color}`)
+          p.style = "color:blue;"
+
+          console.log(`Current class is ${p.getAttribute("class")}`)
+          p.setAttribute("class", "class2")
+        }
+
+    </script>
+  </body>
+</html>
