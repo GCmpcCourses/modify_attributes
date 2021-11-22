@@ -1,3 +1,3 @@
-# Paragraph Count
+# Modify Attributes
 
-A simple web page with a script that counts and reports the number of paragraph tags in the document.
+A simple web page with a script that gets and sets various HTML attributes.
